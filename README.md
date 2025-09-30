@@ -26,6 +26,105 @@ In hierarchical inheritance, more than one subclass is inherited from a single b
 + Class Hierarchy : You can build hierarchies (base → derived → further derived) to model real-world relationships.
 + Polymorphism : Fully supports runtime polymorphism through virtual functions, and also compile-time polymorphism via function overloading and templates.
 # Implementation:
+To demonstrate Inheritance in C++ the following codes have been implemented,
++ Single Inheritance
++ Multiple Inheritance
++ Multilevel Inheritance
++ Hierarchy Inheritance
++ Access Specifier in Inheritance (Protected)
+# Algorithms:
+
+Algorithm: Single Inheritance (Animal and Dog)
+
+1. Start
+2. Define a base class `Animal`:
+
+   * Public member function `eat()` to display `"This animal eats food."`
+3. Define a derived class `Dog` that publicly inherits `Animal`:
+
+   Public member function `bark()` to display `"The dog barks."`
+4. In `main()`:
+   1. Create an object `myDog` of class `Dog`.
+   2. Call `myDog.eat()` to invoke the inherited function from `Animal`.
+   3. Call `myDog.bark()` to invoke the function defined in `Dog`.
+5. End
+
+Algorithm: Multiple Inheritance (Car inherits Vehicle and Specs)
+
+1. Start
+2. Define base class `Vehicle`:
+
+   * Public string `company` initialized as `"Toyota"`.
+   * Public member function `type()` to display `"Supra"`.
+3. Define base class `Specs`:
+   * Public string `mileage` initialized as `"12 kmpl"`.
+   * Public member function `colour()` to display `"Red"`.
+4. Define derived class `Car` that publicly inherits `Vehicle` and `Specs`:
+   * Public string `seater` initialized as `"2 seater"`.
+5. In `main()`:
+   1. Create an object `f2` of class `Car`.
+   2. Call `f2.colour()` from `Specs`.
+   3. Print `f2.company` from `Vehicle`.
+   4. Call `f2.type()` from `Vehicle`.
+   5. Print `f2.seater` and `f2.mileage` from `Car` and `Specs`.
+6. End
+
+Algorithm: Multilevel Inheritance (Library inherits Title, Title inherits Book)
+
+1. Start
+2. Define base class `Book`:
+   * Public string `genre` initialized as `"Science Fiction"`.
+   * Public member function `type()` to display `"Novel"`.
+3. Define derived class `Title` that publicly inherits `Book`:
+   * Public string `title` initialized as `"Dune"`.
+4. Define derived class `Library` that publicly inherits `Title`:
+   Public string `name` initialized as `"Central Library"`.
+5. In `main()`:
+   1. Create an object `b3` of class `Library`.
+   2. Call `b3.type()` from `Book`.
+   3. Print `b3.genre` and `b3.title` from `Book` and `Title`.
+   4. Print `b3.name` from `Library`.
+6. End
+
+Algorithm: Hierarchical Inheritance (Fruit → Apple/Banana/Cherry)
+
+1. Start
+2. Define base class `Fruit`:
+
+    Public string array `type[3]` containing `"Apple"`, `"Banana"`, `"Cherry"`.
+   Public member function `supplier()` to display `"Fresh Farms Ltd."`.
+3. Define derived classes `Apple`, `Banana`, `Cherry` that each publicly inherit `Fruit`:
+   `Apple` has public string `color = "Red"`.
+    `Banana` has public string `color = "Yellow"`.
+     `Cherry` has public string `color = "Dark Red"`.
+4. In `main()`:
+   1. Create object `f1` of class `Apple`.
+      Call `f1.supplier()`.
+        Print `f1.type[0]` and `f1.color`.
+   2. Create object `f2` of class `Banana`.
+
+      Call `f2.supplier()`.
+        Print `f2.type[1]` and `f2.color`.
+   3. Create object `f3` of class `Cherry`.
+
+      Call `f3.supplier()`.
+        Print `f3.type[2]` and `f3.color`.
+5. End
+
+Algorithm: Accessing Protected Members in Inheritance
+
+1. Start
+2. Define a base class `Parent`:
+   `protected` integer `protectedValue`.
+     Constructor initializes `protectedValue = 42`.
+3. Define a derived class `Child` that publicly inherits `Parent`:
+
+   Public member function `showProtected()` displays `protectedValue`.
+4. In `main()`:
+   1. Create object `obj` of class `Child`.
+   2. Call `obj.showProtected()` to print the inherited `protectedValue`.
+5. End
+
 
 # Conclusion:
-
+The above codes Demonstrates Inheritance an important OOP Concept of C++.
